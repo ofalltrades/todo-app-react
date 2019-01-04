@@ -20,21 +20,21 @@ const Input = styled.input`
   }
 `
 
+const handleOnSubmit = ({ event, input, dispatch }) => {
+  event.preventDefault()
+
+  if (input.value.trim()) {
+    dispatch(addTodo(input.value))
+    input.value = ''
+  }
+}
+
 const TodoInput = ({ dispatch }) => {
   let input
 
   return (
     <div>
-      <form
-        onSubmit={e => {
-          e.preventDefault()
-          if (!input.value.trim()) {
-            return
-          }
-          dispatch(addTodo(input.value))
-          input.value = ''
-        }}
-      >
+      <form onSubmit={event => handleOnSubmit({ event, input, dispatch })}>
         <Input placeholder="add todo" ref={node => (input = node)} />
         <Button type="submit" color="limegreen">
           +
