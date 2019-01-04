@@ -14,6 +14,7 @@ const Input = styled.input`
   height: 2em;
   font-size: 20px;
   width: 35%;
+  background: #ffeeda;
 
   ::placeholder {
     color: lightgray;

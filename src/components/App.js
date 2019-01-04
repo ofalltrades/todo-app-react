@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
 import TodoInput from '../containers/TodoInput'
 import Todos from '../containers/Todos'
+import Header from './Header'
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>TODO NOTEPAD</h1>
-        <TodoInput />
-        <Todos />
-      </div>
-    )
-  }
-}
+const Container = styled.div`
+  padding: 1rem;
+`
+
+const App = () => (
+  <Container>
+    <Header />
+    <TodoInput />
+    <Todos />
+  </Container>
+)
 
 export default App
