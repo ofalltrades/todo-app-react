@@ -6,7 +6,7 @@ let todoID = 0
 
 export const addTodo = text => ({
   type: ADD_TODO,
-  id: todoID + 1,
+  id: todoID++,
   text
 })
 
