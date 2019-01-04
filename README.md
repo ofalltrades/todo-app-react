@@ -8,4 +8,4 @@ State is managed via Redux. Styled Components are used for all styling. Styling 
 
 - Adding todo: type in input field and either click the `+` button or press enter to create a new event
 - Striking todo: click text of a todo item
-- Delete todo: click red `-` button to the right of todo item
+- Delete todo: click red `x` button to the right of todo item

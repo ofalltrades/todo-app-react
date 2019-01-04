@@ -2,23 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
-import { addTodo } from '../actions'
+import Button from '../components/Button'
 
-const AddButton = styled.button`
-  display: inline-block;
-  border-radius: 9px;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 2rem;
-  background: limegreen;
-  color: white;
-  border: 2px solid white;
-`
+import { addTodo } from '../actions'
 
 const Input = styled.input`
   border-radius: 3px;
   border: 1px solid transparent;
-  border-bottom: 1px solid limegreen;
+  border-bottom: 1px solid lightgray;
   margin: 0 0 1em;
   height: 2em;
   font-size: 20px;
@@ -45,7 +36,9 @@ const TodoInput = ({ dispatch }) => {
         }}
       >
         <Input placeholder="add todo" ref={node => (input = node)} />
-        <AddButton type="submit">+</AddButton>
+        <Button type="submit" color="limegreen">
+          +
+        </Button>
       </form>
     </div>
   )

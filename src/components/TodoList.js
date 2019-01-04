@@ -4,18 +4,15 @@ import PropTypes from 'prop-types'
 import Todo from './Todo'
 import { removeTodo } from '../actions'
 
-const TodoList = ({ todos, toggleTodo, removeTodo }) => (
-  <ul>
-    {todos.map(todo => (
-      <Todo
-        key={todo.id}
-        {...todo}
-        onClickText={() => toggleTodo(todo.id)}
-        onClickRemove={() => removeTodo(todo.id)}
-      />
-    ))}
-  </ul>
-)
+const TodoList = ({ todos, toggleTodo, removeTodo }) =>
+  todos.map(todo => (
+    <Todo
+      key={todo.id}
+      {...todo}
+      onClickText={() => toggleTodo(todo.id)}
+      onClickRemove={() => removeTodo(todo.id)}
+    />
+  ))
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(

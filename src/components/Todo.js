@@ -2,27 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const RemoveButton = styled.button`
-  display: inline-block;
-  border-radius: 9px;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 2rem;
-  background: red;
-  color: white;
-  border: 2px solid white;
-`
+import TodoText from './TodoText'
+import Button from './Button'
 
 const Todo = ({ text, complete, onClickText, onClickRemove }) => (
   <div>
-    <span
-      style={{ textDecoration: complete ? 'line-through' : 'none' }}
-      onClick={onClickText}
-    >
+    <TodoText onClick={onClickText} {...{ complete }}>
       {text}
-    </span>
+    </TodoText>
 
-    <RemoveButton onClick={onClickRemove}>-</RemoveButton>
+    <Button onClick={onClickRemove} color="red">
+      x
+    </Button>
   </div>
 )
 
