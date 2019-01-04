@@ -14,7 +14,7 @@ const RemoveButton = styled.button`
 `
 
 const Todo = ({ text, complete, onClickText, onClickRemove }) => (
-  <li>
+  <div>
     <span
       style={{ textDecoration: complete ? 'line-through' : 'none' }}
       onClick={onClickText}
@@ -23,7 +23,7 @@ const Todo = ({ text, complete, onClickText, onClickRemove }) => (
     </span>
 
     <RemoveButton onClick={onClickRemove}>-</RemoveButton>
-  </li>
+  </div>
 )
 
 Todo.propTypes = {
