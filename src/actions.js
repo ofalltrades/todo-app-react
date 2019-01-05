@@ -1,9 +1,6 @@
 import store from './store'
 
-const INCREMENT_ID = 'INCREMENT_ID'
-const ADD_TODO = 'ADD_TODO'
-const REMOVE_TODO = 'REMOVE_TODO'
-const TOGGLE_TODO = 'TOGGLE_TODO'
+import { INCREMENT_ID, ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from './actionTypes'
 
 export const incrementID = () => ({ type: INCREMENT_ID })
 
