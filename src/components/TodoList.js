@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Todo from './Todo'
-import { removeTodo } from '../actions'
 
 const TodoList = ({ todos, toggleTodo, removeTodo }) =>
   todos.map(todo => (
