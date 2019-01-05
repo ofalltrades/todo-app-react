@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Button from '../components/Button'
 
-import { addTodo } from '../actions'
+import { incrementID, addTodo } from '../actions'
 
 const Input = styled.input`
   border-radius: 3px;
@@ -25,6 +25,7 @@ const handleOnSubmit = ({ event, input, dispatch }) => {
   event.preventDefault()
 
   if (input.value.trim()) {
+    dispatch(incrementID())
     dispatch(addTodo(input.value))
     input.value = ''
   }

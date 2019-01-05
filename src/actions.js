@@ -1,12 +1,15 @@
+import store from './store'
+
+const INCREMENT_ID = 'INCREMENT_ID'
 const ADD_TODO = 'ADD_TODO'
 const REMOVE_TODO = 'REMOVE_TODO'
 const TOGGLE_TODO = 'TOGGLE_TODO'
 
-let todoID = 0
+export const incrementID = () => ({ type: INCREMENT_ID })
 
 export const addTodo = text => ({
   type: ADD_TODO,
-  id: todoID++,
+  id: store.getState().nextID,
   text
 })
 
